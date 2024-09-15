@@ -3,7 +3,8 @@ import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-const token = 'MTI4NDA0MjA2MjYwMTM5MjE0OQ.G3_TSe.OKzqBsWc_2hMhC64sDAJvlKEbSiatsZyoXu0p0'; // Replace this with your bot's token
+const token = process.env.DISCORD_BOT_TOKEN;
+
 const webAppUrl = 'https://script.google.com/macros/s/AKfycbxRtppFiSg7EDVK5uWTJhKFR9lj5Odut5dnrHhLQBQ6lg9T8hVJpRk5YSRneZB45VPdzQ/exec'; // Replace this with your web app URL
 
 client.once('ready', () => {
